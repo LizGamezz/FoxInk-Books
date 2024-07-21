@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Georgia";
+            background-color: rgb(189, 103, 22);
+        }
+        .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: FAQ/Inquiry; }
+            .tab4 { grid-area: Cart; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home   Store   FAQ/Inquiry   Cart';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .collapsible {
+            font-family: "Georgia";
+            background-color: rgb(136, 52, 4);
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+            .active, .collapsible:hover {
+                background-color: rgb(156, 71, 22);
+            }
+
+        .content {
+            font-family: "Georgia";
+            padding: 0 18px;
+            width: 77.6%;
+            display: none;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.26);
+        }
+    </style>
+
+</head>
+<body><center>
+    <img src="FoxInk.png" alt="Logo" style = "position: center">
+    <div class="grid-container">
+    <div class="tabs">
+        <a class="tab1" href="Home.html">Home</a>
+        <a class="tab2" href="Books.html">Store</a>
+        <a class="tab3" href="Cart.html">Cart</a>
+        <a class="tab4" href="FAQ.html">FAQ/Contact</a>
+    </div>
+</div></center>
+
+    <h2>Order Status</h2>
+
+    <button type="button" class="collapsible">Has my order shipped?</button>
+    <div class="content">
+        <p>Please allow up to 1-2 days for your order to ship. Once shipped, you will receive an email with order status along with a tracking number</p>
+    </div>
+
+    <button type="button" class="collapsible">How do I change an item in my order?</button>
+    <div class="content">
+        <p>In order to change an item in your order, please contact one of our representatives to do so. Contact information can be found at the bottom of the page.</p>
+    </div>
+
+    <button type="button" class="collapsible">How do I cancel an item in my order?</button>
+    <div class="content">
+        <p>To cancel an order, please do so within 24 hours from when the original order was placed. Please allow 3 to 5 business days for money to be returned into your bank account. If you do not see your refund within this time frame, please contact us for further assistance.</p>
+    </div>
+
+    <button type="button" class="collapsible">How do I track my order?</button>
+    <div class="content">
+        <p>Once your order has shipped, the order number along with tracking reference number will be provided via email. Click on the tracking number and you can track your order from there.</p>
+    </div>
+
+    <h2>My Account</h2>
+
+    <button type="button" class="collapsible">How do I return my order?</button>
+    <div class="content">
+        <p>Please log into your account and print out the return label for  the item. Return label includes step by step return instructions.</p>
+    </div>
+
+    <button type="button" class="collapsible">What is the return policy?</button>
+    <div class="content">
+        <p>There is a 15 day return for <b>BOTH</b> new and used products. Please return item in its original package whether it has been opened or not. Items that are broken or damaged will <b>NOT</b>  be accepted.</p>
+    </div>
+
+    <h2>Prices and Billing</h2>
+
+    <button type="button" class="collapsible">I have a question about the charges on my account.</button>
+    <div class="content">
+        <p>If there is an unexpected or suspicious charge to your account please contact us ASAP. We also advise that you contact your bank and review your bank account as well.</p>
+    </div>
+
+    <button type="button" class="collapsible">I need a copy of my receipt and/or invoice.</button>
+    <div class="content">
+        <p>Receipts and/or invoices are available once an order has been placed. You can find the link to print and save it when you click on your Order number.</p>
+    </div>
+
+    <button type="button" class="collapsible">When will my debit/credit card be charged?</button>
+    <div class="content">
+        <p>Debit and credit cards are charged when an order enters the shipping process.</p>
+    </div>
+
+    <button type="button" class="collapsible">Do you accept Afterpay, Klarna, Affirm, and other pay over time services?</button>
+    <div class="content">
+        <p>As of now, we unfortunately do not. Our team is currently working on setting us up with that. Stay tuned! </p>
+    </div>
+
+    <button type="button" class="collapsible">When will a credit appear on my account?</button>
+    <div class="content">
+        <p>Please allow up to 2-3 business days for a credit to show up on your account. If credit does not appear after this time, please contact one of our representatives. </p>
+    </div>
+
+    <section>
+        <h2>Get In Touch</h2>
+        <p>Whether you need further assistance, want to let us know what you think, or simply say hey! At <b>FoxInk Books</b>, our mission is to help and respond in a timely manner.</p>
+    </section>
+
+    <form action="/action_page.php" method="get">
+        <p>
+            <label for="name">Full Name:</label>
+            <input type="text" id="full name" name="full name" required>
+        </p>
+        <p>
+            <label for="email address">Email:</label>
+            <input type="text" id="email address" name="email address" required>
+        </p>
+        <p>
+            <label for="inquiry">Inquiry:</label>
+            <textarea rows="3" cols="50" id="inquiry" name="inquiry"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+
+    <section>
+        <h2>Contact Info</h2>
+        <ul>
+            <p>You can reach us at (555) 555-5555</p>
+            <p>Monday-Friday 8:00AM to 5:00PM EST</p>
+        </ul>
+        <h2>Email Address</h2>
+        <ul>
+            <a href="mailto: business.office@ung.edu">business.office@ung.edu</a>
+        </ul>
+
+        <h2>Mailing Address</h2>
+        <ul>
+            <p><a href="https://www.google.com/maps/place/University+of+North+Georgia+Dahlonega+Campus/@34.5277956,-83.9868448,17z/data=!3m1!4b1!4m6!3m5!1s0x885f6625aa36e04f:0x7a138b5043137a29!8m2!3d34.5277912!4d-83.9842645!16s%2Fm%2F0jt5nm8" target="blank">82 College Circle Dahlonega, GA 30597</a></p>
+        </ul>
+    </section>
+
+    <script>var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }</script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues8()
+            {
+                var firstname="The American Story: The Beginnings";
+                var price = 10;
+                localStorage.setItem("textvalue8",firstname);
+                localStorage.setItem("pricevalue8", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues9()
+            {
+                var firstname="The Wingmen";
+                var price = 10;
+                localStorage.setItem("textvalue9",firstname);
+                localStorage.setItem("pricevalue9", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues10()
+            {
+                var firstname="No Time Like The Future";
+                var price = 10;
+                localStorage.setItem("textvalue10",firstname);
+                localStorage.setItem("pricevalue10", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues11()
+            {
+                var firstname="Bad Karma";
+                var price = 10;
+                localStorage.setItem("textvalue11",firstname);
+                localStorage.setItem("pricevalue11", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function TheAmericanStoryDescription() {
+                alert("AMERICA IS UNIQUE. No other nation in the world has experienced the widespread levels of stability, individual prosperity, and personal freedoms that have defined this nation. What made us different from other nations? Was it the people, the principles, or the blessing of God? It was all three, and they caused America to become the most exceptional nation in the history of the world. Our past is filled with captivating accounts of the brave and the cowardly; of heroes and villains; of atrocities, corruption, and greed as well as self-sacrifice, honor, and redemption. America is not perfect. Yet we have a compelling story of those seeking religious and civil freedom, escaping oppression, pursuing opportunity, and often joining hands to achieve common goals. The American Story highlights this cooperation and presents some of the interesting moments and people that reveal God s Providence in America. We have a fascinating history that must be remembered.");
+            }
+            function TheWingmenDescription() {
+                alert("It was 1953, the Korean War in full throttle, when two men—already experts in their fields—crossed the fabled 38th Parallel into Communist airspace aboard matching Panther jets. John Glenn was an ambitious operations officer with fifty-nine World War II combat missions under his belt. His wingman was Ted Williams, the two-time American League Triple Crown winner who, at the pinnacle of his career, had been inexplicably recalled to active service in the United States Marine Corps. Together, the affable flier and the notoriously tempestuous left fielder soared into North Korea, creating a death-defying bond. Although, over the next half century, their contrasting lives were challenged by exhilarating highs and devastating lows, that bond would endure. Through unpublished letters, unit diaries, declassified military records, manuscripts, and new and illuminating interviews, The Wingmen reveals an epic and intimate portrait of two heroes—larger-than-life and yet ineffably human, ordinary men who accomplished the extraordinary. At its heart, this was a conflicted friendship that found commonality in mutual respect—throughout the perils of war, sports dominance, scientific innovation, cutthroat national politics, the burden of celebrity, and the meaning of bravery. Now, author Adam Lazarus sheds light on a largely forgotten chapter in these legends’ lives—as singular individuals, inspiring patriots, and eventually, however improbable, profoundly close friends.")
+            }
+            function NoTimeDescription() {
+                alert("The entire world knows Michael J. Fox as Marty McFly, the teenage sidekick of Doc Brown in Back to the Future; as Alex P. Keaton in Family Ties; as Mike Flaherty in Spin City; and through numerous other movie roles and guest appearances on shows such as The Good Wife and Curb Your Enthusiasm. Diagnosed at age 29, Michael is equally engaged in Parkinson’s advocacy work, raising global awareness of the disease and helping find a cure through The Michael J. Fox Foundation for Parkinson’s Research, the world’s leading non-profit funder of PD science. His two previous bestselling memoirs, Lucky Man and Always Looking Up, dealt with how he came to terms with the illness, all the while exhibiting his iconic optimism. His new memoir reassesses this outlook, as events in the past decade presented additional challenges. In No Time Like the Future: An Optimist Considers Mortality, Michael shares personal stories and observations about illness and health, aging, the strength of family and friends, and how our perceptions about time affect the way we approach mortality. Thoughtful and moving, but with Fox’s trademark sense of humor, his book provides a vehicle for reflection about our lives, our loves, and our losses. Running through the narrative is the drama of the medical madness Fox recently experienced, that included his daily negotiations with the Parkinson’s disease he’s had since 1991, and a spinal cord issue that necessitated immediate surgery. His challenge to learn how to walk again, only to suffer a devastating fall, nearly caused him to ditch his trademark optimism and “get out of the lemonade business altogether.” Does he make it all of the way back? Read the book.")
+            }
+            function BadKarmaDescription() {
+                alert("In the summer of 1978, twenty-one-year-old Paul Wilson jumps at the chance to join two local icons on a dream surf trip to mainland Mexico, unaware their ultimate destination lies in the heart of drug cartel country. Having no earthly idea of where he’ll get the money to pay his share, and determined to prove his mettle, he does the only thing he can think of: He robs a supermarket. And, if karma didn’t already have enough reason to doom the trip, he soon learns one of his companions is a convicted killer on the run, and the other an unscrupulous cad. Mishap and misfortune rule the days, and mere survival takes precedence over surfing.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="TheAmericanStory.jpg" alt="The American Story" width="200" height="300" style = "position: center"><br>
+                <p>The American Story</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheAmericanStoryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues8();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="TheWingmen.jpg" alt="The Wingmen" width="200" height="300" style = "position: center">
+                <p>The Wingmen</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheWingmenDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues9();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="NoTime.jpg" alt="No Time Like The Future" width="200" height="300" style = "position: center">
+                <p>No Time Like The Future</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="NoTimeDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues10();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="BadKarma.jpg" alt="Bad Karma" width="200" height="300" style = "position: center">
+                <p>Bad Karma</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="BadKarmaDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues11();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

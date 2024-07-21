@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues24()
+            {
+                var firstname="The Last Transmission";
+                var price = 10;
+                localStorage.setItem("textvalue24",firstname);
+                localStorage.setItem("pricevalue24", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues25()
+            {
+                var firstname="The Butler's Ghost";
+                var price = 10;
+                localStorage.setItem("textvalue25",firstname);
+                localStorage.setItem("pricevalue25", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues26()
+            {
+                var firstname="The Watchers";
+                var price = 10;
+                localStorage.setItem("textvalue26",firstname);
+                localStorage.setItem("pricevalue26", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues27()
+            {
+                var firstname="Where He Can't Find You";
+                var price = 10;
+                localStorage.setItem("textvalue27",firstname);
+                localStorage.setItem("pricevalue27", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function LastTransmissionDescription() {
+                alert("In the summer of 1966 Capt. Thompson and the USS Banner had embarked on a mission deemed Top Secret. Three scientists including Dr. Rieko Ishii, daughter of infamous WWII war criminal Shiro Ishii, were assigned to the Banner's highly confidential mission to investigate a mysterious and disturbing phenomenon affecting the local population on a remote island. As the horror surrounding the island reveals itself, the officers and crew of the Banner begin to suspect foul play. The disturbing truth of the island's fate slowly unfolds as the ship and its crew struggle to survive the very thing they came to investigate.");
+            }
+            function ButlersGhostDescription() {
+                alert("A successful businessman buys his dream house for himself and his family, only to find out that it is still occupied, and has been - by the same man - for over 150 years.")
+            }
+            function WatchersDescription() {
+                alert("This forest isn't charted on any map. Every car breaks down at its treeline. Mina's is no different. Left stranded, she is forced into the dark woodland only to find a woman shouting, urging Mina to run to a concrete bunker. As the door slams behind her, the building is besieged by screams. Mina finds herself in a room with a wall of glass, and an electric light that activates at nightfall, when the Watchers come above ground. These creatures emerge to observe their captive humans and terrible things happen to anyone who doesn't reach the bunker in time. Afraid and trapped among strangers, Mina is desperate for answers. Who are the Watchers, and why are they keeping the humans imprisoned, keen to watch their every move?")
+            }
+            function WhereHeCantFindYouDescription() {
+                alert("DON'T WALK ALONE, OR THE STITCHER WILL FIND YOU. Abby Ward lives in a town haunted by disappearances. People vanish, and when they're found, their bodies have been dismembered and sewn back together in unnatural ways. But is it the work of a human killer…or something far darker? DON'T STAY OUT LATE, OR THE STITCHER WILL TAKE YOU. She and her younger sister live by a strict set of rules designed to keep them safe―which is why it's such a shock when Hope is taken. Desperate to get her back, Abby tells the police everything she knows, but they claim their hands are tied. DON'T CLOSE YOUR EYES, OR THE STITCHER WILL REMAKE YOU. With every hour precious, Abby and her friends are caught in a desperate game of cat and mouse. They have to get Hope back. Quickly. Before too much of her is cut away. And before everything they care about is swallowed up by the darkness waiting in the tunnels beneath the home they thought they knew.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="LastTransmission.jpg" alt="The Last Transmission" width="200" height="300" style = "position: center"><br>
+                <p>The Last Transmission</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="LastTransmissionDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues24();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="ButlersGhost.jpg" alt="The Butler's Ghost" width="200" height="300" style = "position: center">
+                <p>The Butler's Ghost</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="ButlersGhostDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues25();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="Watchers.jpg" alt="The Watchers" width="200" height="300" style = "position: center">
+                <p>The Watchers</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WatchersDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues26();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="WhereHeCantFindYou.jpg" alt="Where He Can't Find You" width="200" height="300" style = "position: center">
+                <p>Where He Can't Find You</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WhereHeCantFindYouDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues27();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box4 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box5 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box6 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box7 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box8 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box9 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box4:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box5:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box6:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box7:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box8:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box9:hover {
+                font: Georgia;
+                padding: 20px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues()
+            {
+                var firstname="Keeper Of Stars";
+                var price = 10;
+                localStorage.setItem("textvalue",firstname);
+                localStorage.setItem("pricevalue", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues1()
+            {
+                var firstname="Beneath A Scarlet Sky";
+                var price = 10;
+                localStorage.setItem("textvalue1",firstname);
+                localStorage.setItem("pricevalue1", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues2()
+            {
+                var firstname="The Midnight Library";
+                var price = 10;
+                localStorage.setItem("textvalue2",firstname);
+                localStorage.setItem("pricevalue2", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues3()
+            {
+                var firstname="Goodnight From Paris";
+                var price = 10;
+                localStorage.setItem("textvalue3",firstname);
+                localStorage.setItem("pricevalue3", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues4()
+            {
+                var firstname="West With Giraffes";
+                var price = 10;
+                localStorage.setItem("textvalue4",firstname);
+                localStorage.setItem("pricevalue4", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues5()
+            {
+                var firstname="The Unthinkable";
+                var price = 10;
+                localStorage.setItem("textvalue5",firstname);
+                localStorage.setItem("pricevalue5", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues6()
+            {
+                var firstname="Long Live The Cartel";
+                var price = 10;
+                localStorage.setItem("textvalue6",firstname);
+                localStorage.setItem("pricevalue6", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues7()
+            {
+                var firstname="The Promise of Change";
+                var price = 10;
+                localStorage.setItem("textvalue7",firstname);
+                localStorage.setItem("pricevalue7", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues8()
+            {
+                var firstname="The American Story: The Beginnings";
+                var price = 10;
+                localStorage.setItem("textvalue8",firstname);
+                localStorage.setItem("pricevalue8", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues9()
+            {
+                var firstname="The Wingmen";
+                var price = 10;
+                localStorage.setItem("textvalue9",firstname);
+                localStorage.setItem("pricevalue9", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues10()
+            {
+                var firstname="No Time Like The Future";
+                var price = 10;
+                localStorage.setItem("textvalue10",firstname);
+                localStorage.setItem("pricevalue10", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues11()
+            {
+                var firstname="Bad Karma";
+                var price = 10;
+                localStorage.setItem("textvalue11",firstname);
+                localStorage.setItem("pricevalue11", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function passvalues12()
+            {
+                var firstname="History of the World";
+                var price = 10;
+                localStorage.setItem("textvalue12",firstname);
+                localStorage.setItem("pricevalue12", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues13()
+            {
+                var firstname="The Hundred Years' War";
+                var price = 10;
+                localStorage.setItem("textvalue13",firstname);
+                localStorage.setItem("pricevalue13", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues14()
+            {
+                var firstname="A Brief History of Intelligence";
+                var price = 10;
+                localStorage.setItem("textvalue14",firstname);
+                localStorage.setItem("pricevalue14", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues15()
+            {
+                var firstname="The Color of Law";
+                var price = 10;
+                localStorage.setItem("textvalue15",firstname);
+                localStorage.setItem("pricevalue15", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function passvalues16()
+            {
+                var firstname="The Snowdonia Killings";
+                var price = 10;
+                localStorage.setItem("textvalue16",firstname);
+                localStorage.setItem("pricevalue16", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues17()
+            {
+                var firstname="Path of Bones";
+                var price = 10;
+                localStorage.setItem("textvalue17",firstname);
+                localStorage.setItem("pricevalue17", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues18()
+            {
+                var firstname="Then She Was Gone";
+                var price = 10;
+                localStorage.setItem("textvalue18",firstname);
+                localStorage.setItem("pricevalue18", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues19()
+            {
+                var firstname="Those Empty Eyes";
+                var price = 10;
+                localStorage.setItem("textvalue19",firstname);
+                localStorage.setItem("pricevalue19", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function passvalues20()
+            {
+                var firstname="Don't Believe It";
+                var price = 10;
+                localStorage.setItem("textvalue20",firstname);
+                localStorage.setItem("pricevalue20", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues21()
+            {
+                var firstname="Pretty Girls";
+                var price = 10;
+                localStorage.setItem("textvalue21",firstname);
+                localStorage.setItem("pricevalue21", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues22()
+            {
+                var firstname="The Housemaid";
+                var price = 10;
+                localStorage.setItem("textvalue22",firstname);
+                localStorage.setItem("pricevalue22", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues23()
+            {
+                var firstname="The Quarry Girls";
+                var price = 10;
+                localStorage.setItem("textvalue23",firstname);
+                localStorage.setItem("pricevalue23", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function passvalues24()
+            {
+                var firstname="The Last Transmission";
+                var price = 10;
+                localStorage.setItem("textvalue24",firstname);
+                localStorage.setItem("pricevalue24", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues25()
+            {
+                var firstname="The Butler's Ghost";
+                var price = 10;
+                localStorage.setItem("textvalue25",firstname);
+                localStorage.setItem("pricevalue25", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues26()
+            {
+                var firstname="The Watchers";
+                var price = 10;
+                localStorage.setItem("textvalue26",firstname);
+                localStorage.setItem("pricevalue26", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues27()
+            {
+                var firstname="Where He Can't Find You";
+                var price = 10;
+                localStorage.setItem("textvalue27",firstname);
+                localStorage.setItem("pricevalue27", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function KeeperOfStarsDescription() {
+                alert("1962—Twelve years removed from the summer when she first gave her heart away, Dr. Elizabeth (Ellie) Spencer, Professor of Astronomy at Indiana University, receives a mysterious package that has her asking that very question. Inside the unmarked box is a novel written by Ellie’s first love, Jack Bennett. It tells the story of a young man and woman who meet at the water’s edge and fall madly in love, only to have their romance cut short by forces beyond their control. Ellie quickly realizes this is no ordinary story; it’s their story. Captivated by Jack’s words, she immerses herself in the pages, reliving the adventures they shared that magical summer. To her astonishment, hidden among the tales of star-gazing and stolen kisses is a detail that has her questioning everything. Seeking answers, Ellie turns to her sister for help, but before they can get to the bottom of the mystery, news reaches them of their aunt’s death, sending Ellie back to the water’s edge with the hopes of finding the truth and rewriting the stars.");
+            }
+            function BeneathAScarletSkyDescription() {
+                alert("Pino Lella wants nothing to do with the war or the Nazis. He’s a normal Italian teenager―obsessed with music, food, and girls―but his days of innocence are numbered. When his family home in Milan is destroyed by Allied bombs, Pino joins an underground railroad helping Jews escape over the Alps, and falls for Anna, a beautiful widow six years his senior. In an attempt to protect him, Pino’s parents force him to enlist as a German soldier―a move they think will keep him out of combat. But after Pino is injured, he is recruited at the tender age of eighteen to become the personal driver for Adolf Hitler’s left hand in Italy, General Hans Leyers, one of the Third Reich’s most mysterious and powerful commanders. Now, with the opportunity to spy for the Allies inside the German High Command, Pino endures the horrors of the war and the Nazi occupation by fighting in secret, his courage bolstered by his love for Anna and for the life he dreams they will one day share.")
+            }
+            function MidnightLibraryDescription() {
+                alert("Somewhere out beyond the edge of the universe there is a library that contains an infinite number of books, each one the story of another reality. One tells the story of your life as it is, along with another book for the other life you could have lived if you had made a different choice at any point in your life. While we all wonder how our lives might have been, what if you had the chance to go to the library and see for yourself? Would any of these other lives truly be better? In The Midnight Library, Matt Haig's enchanting blockbuster novel, Nora Seed finds herself faced with this decision. Faced with the possibility of changing her life for a new one, following a different career, undoing old breakups, realizing her dreams of becoming a glaciologist; she must search within herself as she travels through the Midnight Library to decide what is truly fulfilling in life, and what makes it worth living in the first place.")
+            }
+            function GoodnightFromParisDescription() {
+                alert("Paris, 1939. Hollywood actress Drue Leyton, married to Frenchman Jacques Tartière, lives as an expatriate in love. But when her husband is dispatched to Brittany to work as a liaison for the British military, Drue finds herself alone with her housekeeper, adrift and heartsick in her adopted city. With her career and fame forty-five hundred miles away, Drue accepts an opportunity that will change her life forever. Befriended by seasoned wartime journalist Dorothy Thompson and urged on by political operative Jean Fraysse, Drue broadcasts radio programs to the United States. Her duty: shake America from its apathy and, as Nazis encroach and France is occupied, push for resistance and help from the US. As Drue and Jean fall under suspicion, Hitler sends his own message: when Drue’s adopted country is conquered, she will be executed. In a Paris that is no longer safe, Drue’s political passion is ignited. She’s prepared to risk anything to fight the enemy no matter how dangerous it gets―for her, for everyone she loves, and for everything she’s fighting for.")
+            }
+            function WestWithGiraffesDescription() {
+                alert("Woodrow Wilson Nickel, age 105, feels his life ebbing away. But when he learns giraffes are going extinct, he finds himself recalling the unforgettable experience he cannot take to his grave. It’s 1938. The Great Depression lingers. Hitler is threatening Europe, and world-weary Americans long for wonder. They find it in two giraffes who miraculously survive a hurricane while crossing the Atlantic. What follows is a twelve-day road trip in a custom truck to deliver Southern California’s first giraffes to the San Diego Zoo. Behind the wheel is the young Dust Bowl rowdy Woodrow. Inspired by true events, the tale weaves real-life figures with fictional ones, including the world’s first female zoo director, a crusty old man with a past, a young female photographer with a secret, and assorted reprobates as spotty as the giraffes. Part adventure, part historical saga, and part coming-of-age love story, West with Giraffes explores what it means to be changed by the grace of animals, the kindness of strangers, the passing of time, and a story told before it’s too late.");
+            }
+            function TheUnthinkableDescription() {
+                alert("Discover how human beings react to danger–and what makes the difference between life and death. Today, nine out of ten Americans live in places at significant risk of earthquakes, hurricanes, tornadoes, terrorism, or other disasters. Tomorrow, some of us will have to make split-second choices to save ourselves and our families. How will we react? What will it feel like? Will we be heroes or victims? In her quest to answer these questions, award-winning journalist Amanda Ripley traces human responses to some of recent history’s epic disasters, from the explosion of the Mont Blanc munitions ship in 1917–one of the biggest explosions before the invention of the atomic bomb–to the journeys of the 15,000 people who found their way out of the World Trade Center on September 11, 2001. To understand the science behind the stories, Ripley turns to leading brain scientists, trauma psychologists, and other disaster experts. She even has her own brain examined by military researchers and experiences, through realistic simulations, what it might be like to survive a plane crash into the ocean or to escape a raging fire. Ripley comes back with precious wisdom about the surprising humanity of crowds, the elegance of the brain’s fear circuits, and the stunning inadequacy of many of our evolutionary responses. Most unexpectedly, she discovers the brain’s ability to do much, much better–with just a little help.")
+            }
+            function LongLiveTheCartelDescription() {
+                alert("This is the 8th installment (Cartel 8) of the Cartel Series. In the world of the Cartel, there are many pitfalls and family curses. In the city of Miami, the good die young and the bad live forever. The first family of Miami, The Diamonds, are back and more ruthless than ever. When the family has to deal with the sins of the father, karma comes back and rests on the shoulders of Carter “CJ” Jones II . The life his father never wanted for him, calls him and the allure of family tradition sucks him in so deep, that he falls victim to the game. This story shows the second coming of a king and solidifies the cartel family tree in the roots of the streets forever.Ride with a new regime as Carter II and his cousin Mo attempt to carry the legacy of their fathers on their shoulders. Will the city respect them? Or have the ghosts of the past been erased by a new wave of hustlers. Miami was forever changed when Carter and Miamor came to town. Can The Cartel ever regain their strength or was their fall from power too devastating to repair?Ashley and JaQuavis dive into their franchise series once more and give their fans a taste of classic urban storytelling.")
+            }
+            function ThePromiseOfChangeDescription() {
+                alert("In 1956, one year before federal troops escorted the Little Rock 9 into Central High School, fourteen year old Jo Ann Allen was one of twelve African-American students who broke the color barrier and integrated Clinton High School in Tennessee. At first things went smoothly for the Clinton 12, but then outside agitators interfered, pitting the townspeople against one another. Uneasiness turned into anger, and even the Clinton Twelve themselves wondered if the easier thing to do would be to go back to their old school. Jo Ann--clear-eyed, practical, tolerant, and popular among both black and white students---found herself called on as the spokesperson of the group. But what about just being a regular teen? This is the heartbreaking and relatable story of her four months thrust into the national spotlight and as a trailblazer in history. Based on original research and interviews and featuring backmatter with archival materials and notes from the authors on the co-writing process.")
+            }
+            function TheAmericanStoryDescription() {
+                alert("AMERICA IS UNIQUE. No other nation in the world has experienced the widespread levels of stability, individual prosperity, and personal freedoms that have defined this nation. What made us different from other nations? Was it the people, the principles, or the blessing of God? It was all three, and they caused America to become the most exceptional nation in the history of the world. Our past is filled with captivating accounts of the brave and the cowardly; of heroes and villains; of atrocities, corruption, and greed as well as self-sacrifice, honor, and redemption. America is not perfect. Yet we have a compelling story of those seeking religious and civil freedom, escaping oppression, pursuing opportunity, and often joining hands to achieve common goals. The American Story highlights this cooperation and presents some of the interesting moments and people that reveal God s Providence in America. We have a fascinating history that must be remembered.");
+            }
+            function TheWingmenDescription() {
+                alert("It was 1953, the Korean War in full throttle, when two men—already experts in their fields—crossed the fabled 38th Parallel into Communist airspace aboard matching Panther jets. John Glenn was an ambitious operations officer with fifty-nine World War II combat missions under his belt. His wingman was Ted Williams, the two-time American League Triple Crown winner who, at the pinnacle of his career, had been inexplicably recalled to active service in the United States Marine Corps. Together, the affable flier and the notoriously tempestuous left fielder soared into North Korea, creating a death-defying bond. Although, over the next half century, their contrasting lives were challenged by exhilarating highs and devastating lows, that bond would endure. Through unpublished letters, unit diaries, declassified military records, manuscripts, and new and illuminating interviews, The Wingmen reveals an epic and intimate portrait of two heroes—larger-than-life and yet ineffably human, ordinary men who accomplished the extraordinary. At its heart, this was a conflicted friendship that found commonality in mutual respect—throughout the perils of war, sports dominance, scientific innovation, cutthroat national politics, the burden of celebrity, and the meaning of bravery. Now, author Adam Lazarus sheds light on a largely forgotten chapter in these legends’ lives—as singular individuals, inspiring patriots, and eventually, however improbable, profoundly close friends.")
+            }
+            function NoTimeDescription() {
+                alert("The entire world knows Michael J. Fox as Marty McFly, the teenage sidekick of Doc Brown in Back to the Future; as Alex P. Keaton in Family Ties; as Mike Flaherty in Spin City; and through numerous other movie roles and guest appearances on shows such as The Good Wife and Curb Your Enthusiasm. Diagnosed at age 29, Michael is equally engaged in Parkinson’s advocacy work, raising global awareness of the disease and helping find a cure through The Michael J. Fox Foundation for Parkinson’s Research, the world’s leading non-profit funder of PD science. His two previous bestselling memoirs, Lucky Man and Always Looking Up, dealt with how he came to terms with the illness, all the while exhibiting his iconic optimism. His new memoir reassesses this outlook, as events in the past decade presented additional challenges. In No Time Like the Future: An Optimist Considers Mortality, Michael shares personal stories and observations about illness and health, aging, the strength of family and friends, and how our perceptions about time affect the way we approach mortality. Thoughtful and moving, but with Fox’s trademark sense of humor, his book provides a vehicle for reflection about our lives, our loves, and our losses. Running through the narrative is the drama of the medical madness Fox recently experienced, that included his daily negotiations with the Parkinson’s disease he’s had since 1991, and a spinal cord issue that necessitated immediate surgery. His challenge to learn how to walk again, only to suffer a devastating fall, nearly caused him to ditch his trademark optimism and “get out of the lemonade business altogether.” Does he make it all of the way back? Read the book.")
+            }
+            function BadKarmaDescription() {
+                alert("In the summer of 1978, twenty-one-year-old Paul Wilson jumps at the chance to join two local icons on a dream surf trip to mainland Mexico, unaware their ultimate destination lies in the heart of drug cartel country. Having no earthly idea of where he’ll get the money to pay his share, and determined to prove his mettle, he does the only thing he can think of: He robs a supermarket. And, if karma didn’t already have enough reason to doom the trip, he soon learns one of his companions is a convicted killer on the run, and the other an unscrupulous cad. Mishap and misfortune rule the days, and mere survival takes precedence over surfing.")
+            }
+            function HistoryoftheWorldDescription() {
+                alert("Maps don't just show us where to go, but also where we've been. If you're interested in finding out more about the biggest events in world history, then this book all about history of the world is perfect for you! This stunning history book for adults starts with the evolution and migration of our oldest ancestors out of Africa. You can then look up maps about the Greece and Persian War, the Mongol Conquests, Medieval Europe's trade routes, and the rise of the Ottomans. Explore maps about the colonisation of North America, the scientific revolution, Napoleon's advances, and Britain's control of India. Then uncover the history of later centuries, such as the Age of Imperialism, the American Civil War, industrialised Europe and the transformation of Japan.");
+            }
+            function HundredYearsDescription() {
+                alert("In 1899, Yusuf Diya al-Khalidi, mayor of Jerusalem, alarmed by the Zionist call to create a Jewish national home in Palestine, wrote a letter aimed at Theodore Herzl: the country had an indigenous people who would not easily accept their own displacement. He warned of the perils ahead, ending his note, “in the name of God, let Palestine be left alone.” Thus Rashid Khalidi, al-Khalidi’s great-great-nephew, begins this sweeping history, the first general account of the conflict told from an explicitly Palestinian perspective.")
+            }
+            function ABriefHistoryDescription() {
+                alert("In the last decade, capabilities of artificial intelligence that had long been the realm of science fiction have, for the first time, become our reality. AI is now able to produce original art, identify tumors in pictures, and even steer our cars. And yet, large gaps remain in what modern AI systems can achieve—indeed, human brains still easily perform intellectual feats that we can’t replicate in AI systems. How is it possible that AI can beat a grandmaster at chess but can’t effectively load a dishwasher? As AI entrepreneur Max Bennett compellingly argues, finding the answer requires diving into the billion-year history of how the human brain evolved; a history filled with countless half-starts, calamities, and clever innovations. Not only do our brains have a story to tell—the future of AI may depend on it.")
+            }
+            function ColorofLawDescription() {
+                alert("Widely heralded as a “masterful” (Washington Post) and “essential” (Slate) history of the modern American metropolis, Richard Rothstein’s The Color of Law offers “the most forceful argument ever published on how federal, state, and local governments gave rise to and reinforced neighborhood segregation” (William Julius Wilson). Exploding the myth of de facto segregation arising from private prejudice or the unintended consequences of economic forces, Rothstein describes how the American government systematically imposed residential segregation: with undisguised racial zoning; public housing that purposefully segregated previously mixed communities; subsidies for builders to create whites-only suburbs; tax exemptions for institutions that enforced segregation; and support for violent resistance to African Americans in white neighborhoods. A groundbreaking, “virtually indispensable” study that has already transformed our understanding of twentieth-century urban history (Chicago Daily Observer), The Color of Law forces us to face the obligation to remedy our unconstitutional past. 13 illustrations.")
+            }
+            function SnowdoniaKillingsDescription() {
+                alert("Detective Inspector Ruth Hunter lives with the pain of her partner’s mysterious and unsolved disappearance. About to hit fifty, the veteran police officer trades in the crime-ridden streets of London for a more peaceful life in rural North Wales. But Ruth has barely settled into her new position in North Wales Police, when the body of a brutally murdered woman is discovered…with strange symbols carved into her skin. Teaming up with an obstinate deputy, Ruth struggles to eliminate anyone from a long line of suspects. When another slain victim is discovered with the same cryptic markings, she’s forced to re-think the investigation. Has Ruth got what it takes to solve the case before the murderer attacks again? The Snowdonia Killings is the first book in the DI Ruth Hunter Crime Thriller series which has sold over 2 million copies. If you like dark police procedurals, psychologically complex characters, and shocking twists, then you’ll love Simon McCleave’s pulse-pounding debut novel.");
+            }
+            function PathofBonesDescription() {
+                alert("Cassie Quinn was their voice. As a medium working with the FBI and police nationwide, she communicated with murder victims, giving them a shot at justice from beyond the grave. But after an abduction that stole her powers, Cassie escaped to the quiet life of an art museum curator. That peace shatters when the ghost of a murdered woman invades her home, reigniting her lost gift. Now, Cassie is back in the game, racing against time to decipher the dead woman's message and stop a heartless killer. She's teetering on the edge of life and death, one step away from crossing into the eternal silence. This is the thrilling debut novel in the Cassie Quinn Series from Wall Street Journal bestselling author L.T. Ryan & K.M. Rought—a pulse-pounding mystery with a tantalizing touch of the paranormal.")
+            }
+            function ThenSheWasGoneDescription() {
+                alert("Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. Beloved by her parents, friends, and teachers, and half of a teenaged golden couple. Ellie was days away from an idyllic post-exams summer vacation, with her whole life ahead of her. And then she was gone. Now, her mother Laurel Mack is trying to put her life back together. It’s been ten years since her daughter disappeared, seven years since her marriage ended, and only months since the last clue in Ellie’s case was unearthed. So when she meets an unexpectedly charming man in a café, no one is more surprised than Laurel at how quickly their flirtation develops into something deeper. Before she knows it, she’s meeting Floyd’s daughters—and his youngest, Poppy, takes Laurel’s breath away. Because looking at Poppy is like looking at Ellie. And now, the unanswered questions she’s tried so hard to put to rest begin to haunt Laurel anew. Where did Ellie go? Did she really run away from home, as the police have long suspected, or was there a more sinister reason for her disappearance? Who is Floyd, really? And why does his daughter remind Laurel so viscerally of her own missing girl?")
+            }
+            function ThoseEmptyEyesDescription() {
+                alert("Alex Armstrong has changed everything about herself—her name, her appearance, her backstory. She’s no longer the terrified teenager a rapt audience saw on television, emerging in handcuffs from the quiet suburban home the night her family was massacred. That girl, Alexandra Quinlan, nicknamed Empty Eyes by the media, was accused of the killings, fought to clear her name, and later took the stand during her highly publicized defamation lawsuit that captured the attention of the nation. It’s been ten years since, and Alex hasn’t stopped searching for answers about the night her family was killed, even as she continues to hide her real identity from true crime fanatics and grasping reporters still desperate to locate her. As a legal investigator, she works tirelessly to secure justice for others, too. People like Matthew Claymore, who’s under suspicion in the disappearance of his girlfriend, a student journalist named Laura McAllister.")
+            }
+            function DontBelieveItDescription() {
+                alert("The Girl of Sugar Beach is the most watched documentary in television history—a riveting, true-life mystery that unfolds over twelve weeks and centers on a fascinating question: Did Grace Sebold murder her boyfriend, Julian, while on a Spring Break vacation, or is she a victim of circumstance and poor police work? Grace has spent the last ten years in a St. Lucian prison, and reaches out to filmmaker Sidney Ryan in a last, desperate attempt to prove her innocence. As Sidney begins researching, she uncovers startling evidence overlooked during the original investigation. Before the series even finishes filming, public outcry leads officials to reopen the case.");
+            }
+            function PrettyGirlsDescription() {
+                alert("More than twenty years ago, Claire and Lydia’s teenaged sister Julia vanished without a trace. The two women have not spoken since, and now their lives could not be more different. Claire is the glamorous trophy wife of an Atlanta millionaire. Lydia, a single mother, dates an ex-con and struggles to make ends meet. But neither has recovered from the horror and heartbreak of their shared loss—a devastating wound that's cruelly ripped open when Claire's husband is killed. The disappearance of a teenage girl and the murder of a middle-aged man, almost a quarter-century apart: what could connect them? Forming a wary truce, the surviving sisters look to the past to find the truth, unearthing the secrets that destroyed their family all those years ago . . . and uncovering the possibility of redemption, and revenge, where they least expect it.")
+            }
+            function TheHousemaidDescription() {
+                alert("Every day I clean the Winchesters’ beautiful house top to bottom. I collect their daughter from school. And I cook a delicious meal for the whole family before heading up to eat alone in my tiny room on the top floor. I try to ignore how Nina makes a mess just to watch me clean it up. How she tells strange lies about her own daughter. And how her husband Andrew seems more broken every day. But as I look into Andrew’s handsome brown eyes, so full of pain, it’s hard not to imagine what it would be like to live Nina’s life. The walk-in closet, the fancy car, the perfect husband. I only try on one of Nina’s pristine white dresses once. Just to see what it’s like. But she soon finds out… and by the time I realize my attic bedroom door only locks from the outside, it’s far too late. But I reassure myself: the Winchesters don’t know who I really am. They don’t know what I’m capable of…")
+            }
+            function QuarryGirlsDescription() {
+                alert("Minnesota, 1977. For the teens of one close-knit community, summer means late-night swimming parties at the quarry, the county fair, and venturing into the tunnels beneath the city. But for two best friends, it’s not all fun and games. Heather and Brenda have a secret. Something they saw in the dark. Something they can’t forget. They’ve decided to never tell a soul. But their vow is tested when their friend disappears―the second girl to vanish in a week. And yet the authorities are reluctant to investigate. Heather is terrified that the missing girls are connected to what she and Brenda stumbled upon that night. Desperately searching for answers on her own, she learns that no one in her community is who they seem to be. Not the police, not the boys she met at the quarry, not even her parents. But she can’t stop digging because she knows those girls are in danger. She also knows she’s next.")
+            }
+            function LastTransmissionDescription() {
+                alert("In the summer of 1966 Capt. Thompson and the USS Banner had embarked on a mission deemed Top Secret. Three scientists including Dr. Rieko Ishii, daughter of infamous WWII war criminal Shiro Ishii, were assigned to the Banner's highly confidential mission to investigate a mysterious and disturbing phenomenon affecting the local population on a remote island. As the horror surrounding the island reveals itself, the officers and crew of the Banner begin to suspect foul play. The disturbing truth of the island's fate slowly unfolds as the ship and its crew struggle to survive the very thing they came to investigate.");
+            }
+            function ButlersGhostDescription() {
+                alert("A successful businessman buys his dream house for himself and his family, only to find out that it is still occupied, and has been - by the same man - for over 150 years.")
+            }
+            function WatchersDescription() {
+                alert("This forest isn't charted on any map. Every car breaks down at its treeline. Mina's is no different. Left stranded, she is forced into the dark woodland only to find a woman shouting, urging Mina to run to a concrete bunker. As the door slams behind her, the building is besieged by screams. Mina finds herself in a room with a wall of glass, and an electric light that activates at nightfall, when the Watchers come above ground. These creatures emerge to observe their captive humans and terrible things happen to anyone who doesn't reach the bunker in time. Afraid and trapped among strangers, Mina is desperate for answers. Who are the Watchers, and why are they keeping the humans imprisoned, keen to watch their every move?")
+            }
+            function WhereHeCantFindYouDescription() {
+                alert("DON'T WALK ALONE, OR THE STITCHER WILL FIND YOU. Abby Ward lives in a town haunted by disappearances. People vanish, and when they're found, their bodies have been dismembered and sewn back together in unnatural ways. But is it the work of a human killer…or something far darker? DON'T STAY OUT LATE, OR THE STITCHER WILL TAKE YOU. She and her younger sister live by a strict set of rules designed to keep them safe―which is why it's such a shock when Hope is taken. Desperate to get her back, Abby tells the police everything she knows, but they claim their hands are tied. DON'T CLOSE YOUR EYES, OR THE STITCHER WILL REMAKE YOU. With every hour precious, Abby and her friends are caught in a desperate game of cat and mouse. They have to get Hope back. Quickly. Before too much of her is cut away. And before everything they care about is swallowed up by the darkness waiting in the tunnels beneath the home they thought they knew.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="KeeperOfStars.jpg" alt="KeeperOfStars" width="200" height="300" style = "position: center"><br>
+                <p>The Keeper of Stars</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="KeeperOfStarsDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="BeneathAScarletSky.jpg" alt="Beneath A Scarlet Sky" width="200" height="300" style = "position: center">
+                <p>Beneath A Scarlet Sky</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="BeneathAScarletSkyDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues1();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="MidnightLibrary.jpg" alt="The Midnight Library" width="200" height="300" style = "position: center">
+                <p>The Midnight Library</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="MidnightLibraryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues2();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="GoodnightFromParis.jpg" alt="Goodnight From Paris" width="200" height="300" style = "position: center">
+                <p>Goodnight From Paris</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="GoodnightFromParisDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues3();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        
+        <tr>
+            <th>
+                <div class="box">
+                <img src="WestWithGiraffes.jpg" alt="WestWithGiraffes" width="200" height="300" style = "position: center"><br>
+                <p>West With Giraffes</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WestWithGiraffesDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues4();">Add to cart</button>
+                </form></p></div></th>
+             
+            <th>
+                <div class="box1">
+                <img src="TheUnthinkable.jpg" alt="The TheUnthinkable" width="200" height="300" style = "position: center">
+                <p>The Unthinkable</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheUnthinkableDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues5();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box2">
+                <img src="LongLiveTheCartel.jpg" alt="Long Live The Cartel" width="200" height="300" style = "position: center">
+                <p>Long Live The Cartel</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="LongLiveTheCartelDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues6();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box3">
+                <img src="The PromiseOfChange.jpg" alt="The Promise of Change" width="200" height="300" style = "position: center">
+                <p>The Promise of Change</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThePromiseOfChangeDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues7();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+
+        <tr>
+            <th>
+                <div class="box">
+                <img src="TheAmericanStory.jpg" alt="The American Story" width="200" height="300" style = "position: center"><br>
+                <p>The American Story</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheAmericanStoryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues8();">Add to cart</button>
+                </form></p></div></th>
+             
+            <th>
+                <div class="box1">
+                <img src="TheWingmen.jpg" alt="The Wingmen" width="200" height="300" style = "position: center">
+                <p>The Wingmen</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheWingmenDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues9();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box2">
+                <img src="NoTime.jpg" alt="No Time Like The Future" width="200" height="300" style = "position: center">
+                <p>No Time Like The Future</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="NoTimeDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues10();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box3">
+                <img src="BadKarma.jpg" alt="Bad Karma" width="200" height="300" style = "position: center">
+                <p>Bad Karma</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="BadKarmaDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues11();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="HistoryoftheWorld.jpg" alt="History of the World" width="200" height="300" style = "position: center"><br>
+                <p>History of the World</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="HistoryoftheWorldDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues12();">Add to cart</button>
+                </form></p></div></th>
+             
+            <th>
+                <div class="box1">
+                <img src="HundredYears.jpg" alt="The Hundred Years' War" width="200" height="300" style = "position: center">
+                <p>The Hundred Years' War</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="HundredYearsDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues13();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box2">
+                <img src="ABriefHistory.jpg" alt="Brief History of Intelligence" width="200" height="300" style = "position: center">
+                <p>Brief History of Intelligence</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ABriefHistoryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues14();">Add to cart</button>
+                </form></p></div></th>
+            
+            <th>
+                <div class="box3">
+                <img src="TheColorofLaw.jpg" alt="The Color of Law" width="200" height="300" style = "position: center">
+                <p>The Color of Law</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ColorofLawDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues15();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="SnowdoniaKillings.jpg" alt="The Snowdonia Killings" width="200" height="300" style = "position: center"><br>
+                <p>The Snowdonia Killings</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="SnowdoniaKillingsDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues16();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="PathofBones.jpg" alt="Path of Bones" width="200" height="300" style = "position: center">
+                <p>Path of Bones</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="PathofBonesDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues17();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="ThenSheWasGone.jpg" alt="Then She Was Gone" width="200" height="300" style = "position: center">
+                <p>Then She Was Gone</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThenSheWasGoneDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues18();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="ThoseEmptyEyes.jpg" alt="Those Empty Eyes" width="200" height="300" style = "position: center">
+                <p>Those Empty Eyes</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThoseEmptyEyesDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues19();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="DontBelieveIt.jpg" alt="Don't Believe It" width="200" height="300" style = "position: center"><br>
+                <p>Don't Believe It</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="DontBelieveItDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues20();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="PrettyGirls.jpg" alt="Pretty Girls" width="200" height="300" style = "position: center">
+                <p>Pretty Girls</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="PrettyGirlsDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues21();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="Housemaid.jpg" alt="The Housemaid" width="200" height="300" style = "position: center">
+                <p>The Housemaid</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheHousemaidDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues22();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="QuarryGirls.jpg" alt="The Quarry Girls" width="200" height="300" style = "position: center">
+                <p>The Quarry Girls</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="QuarryGirlsDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues23();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="LastTransmission.jpg" alt="The Last Transmission" width="200" height="300" style = "position: center"><br>
+                <p>The Last Transmission</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="LastTransmissionDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues24();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="ButlersGhost.jpg" alt="The Butler's Ghost" width="200" height="300" style = "position: center">
+                <p>The Butler's Ghost</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="ButlersGhostDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues25();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="Watchers.jpg" alt="The Watchers" width="200" height="300" style = "position: center">
+                <p>The Watchers</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WatchersDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues26();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="WhereHeCantFindYou.jpg" alt="Where He Can't Find You" width="200" height="300" style = "position: center">
+                <p>Where He Can't Find You</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WhereHeCantFindYouDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues27();">Add to cart</button>
+                </form></p></div></th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</center>
+</body>
+</html>

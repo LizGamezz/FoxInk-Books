@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font: Georgia;
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 50px;
+            background-color: rgb(189, 103, 22);
+        }
+
+        .tabs {
+            font: Georgia;
+            font-size: 25px;
+            background-color: white;
+            border: lightgrey;
+        }
+
+        .tab1 {
+            grid-area: Home;
+        }
+
+        .tab2 {
+            grid-area: Store;
+        }
+
+        .tab3 {
+            grid-area: Cart;
+        }
+
+        .tab4 {
+            grid-area: FAQ/Inquiry;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'Home Store Cart FAQ/Inquiry';
+            margin: 0px 222px 5px 223px;
+            word-spacing: 200px;
+        }
+
+        .box {
+            font-size: 25px;
+            background-color: rgb(156, 71, 22);
+            border: black;
+            border-radius: 5px;
+            padding: 5px 20px 15px 20px;
+
+        }
+
+        .box2 {
+            font-size: 25px;
+            background-color: rgb(156, 71, 22);
+            border: black;
+            border-radius: 5px;
+            padding: 5px 20px 15px 20px;
+        }
+
+        .cartbox {
+            border: 20px;
+            border-color: lightgrey;
+            background-color: white;
+            border-style: inset;
+            border-radius: 10px;
+            border-width: 10px;
+            position: absolute;
+            right: 100px;
+            top: 400px;
+            width: 300px;
+            height: 500px;
+            padding: 25px 15px 250px 50px;
+        }
+
+        .button1 {
+            border: solid;
+            color: black;
+            border-width: 25xp;
+            padding: 15px 32px;
+            font-size: 35px;
+            position: absolute;
+            left: 600px;
+            margin-bottom: 400px;
+        }
+    </style>
+    <center><img src="FoxInk.png" alt="Logo" style="position: center"><br>
+        <div class="grid-container">
+            <div class="tabs">
+                <a class="tab1" href="Home.html">Home</a>
+                <a class="tab2" href="Books.html">Store</a>
+                <a class="tab3" href="Cart.html">Cart</a>
+                <a class="tab4" href="FAQ.html">FAQ/Contact</a>
+            </div>
+    </center>
+    </div>
+    <h2>Leaving so soon?</h2>
+</head>
+
+<body>
+    <p>Thanks for shopping with us!</p>
+    <br>
+    <div class="box">
+        <center>
+            <h3>Billing Information</h3>
+        </center>
+        <label for="fullname">Full Name</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="full name"
+            style="width: 400px; height: 30px;"><br>
+        <br>
+
+        <label for="email"> Email</label><br>
+        <input type="text" id="email" name="email" placeholder="name@example.com"
+            style="width: 400px; height: 30px;"><br>
+        <br>
+
+        <label for="adr"> Address</label><br>
+        <input type="text" id="adr" name="address" placeholder="81 College Circle Dr"
+            style="width: 400px; height: 30px;"><br>
+        <br>
+
+        <label for="city"> City</label><br>
+        <input type="text" id="city" name="city" placeholder="Dahlonega" style="width: 400px; height: 30px;"><br><br>
+
+        <label for="state"> State</label><br>
+        <input type="text" id="state" name="state" placeholder="Georgia" style="width: 400px; height: 30px;"><br><br>
+
+        <label for="zip"> Zipcode</label><br>
+        <input type="text" id="zip" name="zip" placeholder="00000" style="width: 400px; height: 30px;">
+    </div><br><br>
+
+    <div class="box2">
+        <h3>Payment</h3>
+        <label for="fname">Accepted Cards</label><br><br>
+        <img src="Discover.png" alt="image" height=75px; width=125px>
+        <img src="Visa.png" alt="image" height=75px width=125px;>
+        <img src="Capital_One.jpg" alt="image" height=75px width=125px;>
+
+        <h3>Payment</h3>
+        <label for="cname">Name on Card</label><br>
+        <input type="text" id="cname" name="cardname" placeholder="full name" style="width: 400px; height: 30px;">
+        <br>
+        <br>
+        <label for="ccnum">Credit card number</label><br>
+        <input type="text" id="ccnum" name="cardnumber" placeholder="0000-0000-0000-0000"
+            style="width: 400px; height: 30px;">
+        <br>
+        <br>
+        <label for="expmonth">Exp Month</label><br>
+        <input type="text" id="expmonth" name="expmonth" placeholder="month" style="width: 400px; height: 30px;">
+        <br>
+        <br>
+        <label for="expyear">Exp Year</label><br>
+        <input type="text" id="expyear" name="expyear" placeholder="year" style="width: 400px; height: 30px;">
+        <br>
+        <br>
+        <label for="cvv">CVV</label><br>
+        <input type="text" id="cvv" name="cvv" placeholder="cvv" style="width: 400px; height: 30px;"><br><br>
+        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label><br><br>
+    </div>
+    <br>
+    <button class="button1" onclick="placeOrder()">Place Order</button>
+
+    <div class="cartbox">
+        <h4>Cart
+            <span class="price" style="color: black"></span>
+        </h4>
+        <p><span id="result"></span> <span class="price" id="pricevalue"></span></p>
+        <p><span id="result1"></span> <span class="price" id="pricevalue1"></span></p>
+        <p><span id="result2"></span> <span class="price" id="pricevalue2"></span></p>
+        <p><span id="result3"></span> <span class="price" id="pricevalue3"></span></p>
+        <p><span id="result4"></span> <span class="price" id="pricevalue4"></span></p>
+        <p><span id="result5"></span> <span class="price" id="pricevalue5"></span></p>
+        <p><span id="result6"></span> <span class="price" id="pricevalue6"></span></p>
+        <p><span id="result7"></span> <span class="price" id="pricevalue7"></span></p>
+        <p><span id="result8"></span> <span class="price" id="pricevalue8"></span></p>
+        <p><span id="result9"></span> <span class="price" id="pricevalue9"></span></p>
+        <p><span id="result10"></span> <span class="price" id="pricevalue10"></span></p>
+        <p><span id="result11"></span> <span class="price" id="pricevalue11"></span></p>
+        <p><span id="result12"></span> <span class="price" id="pricevalue12"></span></p>
+        <p><span id="result13"></span> <span class="price" id="pricevalue13"></span></p>
+        <p><span id="result14"></span> <span class="price" id="pricevalue14"></span></p>
+        <p><span id="result15"></span> <span class="price" id="pricevalue15"></span></p>
+        <p><span id="result16"></span> <span class="price" id="pricevalue16"></span></p>
+        <p><span id="result17"></span> <span class="price" id="pricevalue17"></span></p>
+        <p><span id="result18"></span> <span class="price" id="pricevalue18"></span></p>
+        <p><span id="result19"></span> <span class="price" id="pricevalue19"></span></p>
+        <p><span id="result20"></span> <span class="price" id="pricevalue20"></span></p>
+        <p><span id="result21"></span> <span class="price" id="pricevalue21"></span></p>
+        <p><span id="result22"></span> <span class="price" id="pricevalue22"></span></p>
+        <p><span id="result23"></span> <span class="price" id="pricevalue23"></span></p>
+        <p><span id="result24"></span> <span class="price" id="pricevalue24"></span></p>
+        <p><span id="result25"></span> <span class="price" id="pricevalue25"></span></p>
+        <p><span id="result26"></span> <span class="price" id="pricevalue26"></span></p>
+        <p><span id="result27"></span> <span class="price" id="pricevalue27"></span></p>
+        <script>
+            document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+            document.getElementById("pricevalue").innerHTML = "$" + localStorage.getItem("pricevalue");
+            document.getElementById("result1").innerHTML = localStorage.getItem("textvalue1");
+            document.getElementById("pricevalue1").innerHTML = "$" + localStorage.getItem("pricevalue1");
+            document.getElementById("result2").innerHTML = localStorage.getItem("textvalue2");
+            document.getElementById("pricevalue2").innerHTML = "$" + localStorage.getItem("pricevalue2");
+            document.getElementById("result3").innerHTML = localStorage.getItem("textvalue3");
+            document.getElementById("pricevalue3").innerHTML = "$" + localStorage.getItem("pricevalue3");
+            document.getElementById("result4").innerHTML = localStorage.getItem("textvalue4");
+            document.getElementById("pricevalue4").innerHTML = "$" + localStorage.getItem("pricevalue4");
+            document.getElementById("result5").innerHTML = localStorage.getItem("textvalue5");
+            document.getElementById("pricevalue5").innerHTML = "$" + localStorage.getItem("pricevalue5");
+            document.getElementById("result6").innerHTML = localStorage.getItem("textvalue6");
+            document.getElementById("pricevalue6").innerHTML = "$" + localStorage.getItem("pricevalue6");
+            document.getElementById("result7").innerHTML = localStorage.getItem("textvalue7");
+            document.getElementById("pricevalue7").innerHTML = "$" + localStorage.getItem("pricevalue7");
+            document.getElementById("result8").innerHTML = localStorage.getItem("textvalue8");
+            document.getElementById("pricevalue8").innerHTML = "$" + localStorage.getItem("pricevalue8");
+            document.getElementById("result9").innerHTML = localStorage.getItem("textvalue9");
+            document.getElementById("pricevalue9").innerHTML = "$" + localStorage.getItem("pricevalue9");
+            document.getElementById("result10").innerHTML = localStorage.getItem("textvalue10");
+            document.getElementById("pricevalue10").innerHTML = "$" + localStorage.getItem("pricevalue10");
+            document.getElementById("result11").innerHTML = localStorage.getItem("textvalue11");
+            document.getElementById("pricevalue11").innerHTML = "$" + localStorage.getItem("pricevalue11");
+            document.getElementById("result12").innerHTML = localStorage.getItem("textvalue12");
+            document.getElementById("pricevalue12").innerHTML = "$" + localStorage.getItem("pricevalue12");
+            document.getElementById("result13").innerHTML = localStorage.getItem("textvalue13");
+            document.getElementById("pricevalue13").innerHTML = "$" + localStorage.getItem("pricevalue13");
+            document.getElementById("result14").innerHTML = localStorage.getItem("textvalue14");
+            document.getElementById("pricevalue14").innerHTML = "$" + localStorage.getItem("pricevalue14");
+            document.getElementById("result15").innerHTML = localStorage.getItem("textvalue15");
+            document.getElementById("pricevalue15").innerHTML = "$" + localStorage.getItem("pricevalue15");
+            document.getElementById("result16").innerHTML = localStorage.getItem("textvalue16");
+            document.getElementById("pricevalue16").innerHTML = "$" + localStorage.getItem("pricevalue16");
+            document.getElementById("result17").innerHTML = localStorage.getItem("textvalue17");
+            document.getElementById("pricevalue17").innerHTML = "$" + localStorage.getItem("pricevalue17");
+            document.getElementById("result18").innerHTML = localStorage.getItem("textvalue18");
+            document.getElementById("pricevalue18").innerHTML = "$" + localStorage.getItem("pricevalue18");
+            document.getElementById("result19").innerHTML = localStorage.getItem("textvalue19");
+            document.getElementById("pricevalue19").innerHTML = "$" + localStorage.getItem("pricevalue19");
+            document.getElementById("result20").innerHTML = localStorage.getItem("textvalue20");
+            document.getElementById("pricevalue20").innerHTML = "$" + localStorage.getItem("pricevalue20");
+            document.getElementById("result21").innerHTML = localStorage.getItem("textvalue21");
+            document.getElementById("pricevalue21").innerHTML = "$" + localStorage.getItem("pricevalue21");
+            document.getElementById("result22").innerHTML = localStorage.getItem("textvalue22");
+            document.getElementById("pricevalue22").innerHTML = "$" + localStorage.getItem("pricevalue22");
+            document.getElementById("result23").innerHTML = localStorage.getItem("textvalue23");
+            document.getElementById("pricevalue23").innerHTML = "$" + localStorage.getItem("pricevalue23");
+            document.getElementById("result24").innerHTML = localStorage.getItem("textvalue24");
+            document.getElementById("pricevalue24").innerHTML = "$" + localStorage.getItem("pricevalue24");
+            document.getElementById("result25").innerHTML = localStorage.getItem("textvalue25");
+            document.getElementById("pricevalue25").innerHTML = "$" + localStorage.getItem("pricevalue25");
+            document.getElementById("result26").innerHTML = localStorage.getItem("textvalue26");
+            document.getElementById("pricevalue26").innerHTML = "$" + localStorage.getItem("pricevalue26");
+            document.getElementById("result27").innerHTML = localStorage.getItem("textvalue27");
+            document.getElementById("pricevalue27").innerHTML = "$" + localStorage.getItem("pricevalue27");
+        </script>
+        <hr>
+        <p>Total = <span class="price" id="total" style="color:black"><b></b></p>
+    </div>
+    <script>
+        window.onload = function () {
+            var total = 0;
+
+            if (localStorage.getItem("pricevalue") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue"));
+                document.getElementById("pricevalue").innerHTML = "$" + localStorage.getItem("pricevalue");
+            } else {
+                document.getElementById("pricevalue").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue1") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue1"));
+                document.getElementById("pricevalue1").innerHTML = "$" + localStorage.getItem("pricevalue1");
+            } else {
+                document.getElementById("pricevalue1").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue2") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue2"));
+                document.getElementById("pricevalue2").innerHTML = "$" + localStorage.getItem("pricevalue2");
+            } else {
+                document.getElementById("pricevalue2").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue3") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue3"));
+                document.getElementById("pricevalue3").innerHTML = "$" + localStorage.getItem("pricevalue3");
+            } else {
+                document.getElementById("pricevalue3").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue4") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue4"));
+                document.getElementById("pricevalue4").innerHTML = "$" + localStorage.getItem("pricevalue4");
+            } else {
+                document.getElementById("pricevalue4").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue5") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue5"));
+                document.getElementById("pricevalue5").innerHTML = "$" + localStorage.getItem("pricevalue5");
+            } else {
+                document.getElementById("pricevalue5").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue6") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue6"));
+                document.getElementById("pricevalue6").innerHTML = "$" + localStorage.getItem("pricevalue6");
+            } else {
+                document.getElementById("pricevalue6").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue7") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue7"));
+                document.getElementById("pricevalue7").innerHTML = "$" + localStorage.getItem("pricevalue7");
+            } else {
+                document.getElementById("pricevalue7").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue8") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue8"));
+                document.getElementById("pricevalue8").innerHTML = "$" + localStorage.getItem("pricevalue8");
+            } else {
+                document.getElementById("pricevalue8").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue9") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue9"));
+                document.getElementById("pricevalue9").innerHTML = "$" + localStorage.getItem("pricevalue9");
+            } else {
+                document.getElementById("pricevalue9").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue10") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue10"));
+                document.getElementById("pricevalue10").innerHTML = "$" + localStorage.getItem("pricevalue10");
+            } else {
+                document.getElementById("pricevalue10").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue11") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue11"));
+                document.getElementById("pricevalue11").innerHTML = "$" + localStorage.getItem("pricevalue11");
+            } else {
+                document.getElementById("pricevalue11").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue12") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue12"));
+                document.getElementById("pricevalue12").innerHTML = "$" + localStorage.getItem("pricevalue12");
+            } else {
+                document.getElementById("pricevalue12").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue13") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue13"));
+                document.getElementById("pricevalue13").innerHTML = "$" + localStorage.getItem("pricevalue13");
+            } else {
+                document.getElementById("pricevalue13").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue14") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue14"));
+                document.getElementById("pricevalue14").innerHTML = "$" + localStorage.getItem("pricevalue14");
+            } else {
+                document.getElementById("pricevalue14").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue15") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue15"));
+                document.getElementById("pricevalue15").innerHTML = "$" + localStorage.getItem("pricevalue15");
+            } else {
+                document.getElementById("pricevalue15").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue16") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue16"));
+                document.getElementById("pricevalue16").innerHTML = "$" + localStorage.getItem("pricevalue16");
+            } else {
+                document.getElementById("pricevalue16").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue17") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue17"));
+                document.getElementById("pricevalue17").innerHTML = "$" + localStorage.getItem("pricevalue17");
+            } else {
+                document.getElementById("pricevalue17").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue18") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue18"));
+                document.getElementById("pricevalue18").innerHTML = "$" + localStorage.getItem("pricevalue18");
+            } else {
+                document.getElementById("pricevalue18").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue19") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue19"));
+                document.getElementById("pricevalue19").innerHTML = "$" + localStorage.getItem("pricevalue19");
+            } else {
+                document.getElementById("pricevalue19").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue20") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue20"));
+                document.getElementById("pricevalue20").innerHTML = "$" + localStorage.getItem("pricevalue20");
+            } else {
+                document.getElementById("pricevalue20").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue21") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue21"));
+                document.getElementById("pricevalue21").innerHTML = "$" + localStorage.getItem("pricevalue21");
+            } else {
+                document.getElementById("pricevalue21").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue22") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue22"));
+                document.getElementById("pricevalue22").innerHTML = "$" + localStorage.getItem("pricevalue22");
+            } else {
+                document.getElementById("pricevalue22").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue23") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue23"));
+                document.getElementById("pricevalue23").innerHTML = "$" + localStorage.getItem("pricevalue23");
+            } else {
+                document.getElementById("pricevalue23").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue24") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue24"));
+                document.getElementById("pricevalue24").innerHTML = "$" + localStorage.getItem("pricevalue24");
+            } else {
+                document.getElementById("pricevalue24").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue25") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue25"));
+                document.getElementById("pricevalue25").innerHTML = "$" + localStorage.getItem("pricevalue25");
+            } else {
+                document.getElementById("pricevalue25").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue26") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue26"));
+                document.getElementById("pricevalue26").innerHTML = "$" + localStorage.getItem("pricevalue26");
+            } else {
+                document.getElementById("pricevalue26").innerHTML = "";
+            }
+            if (localStorage.getItem("pricevalue27") !== null) {
+                total += parseFloat(localStorage.getItem("pricevalue27"));
+                document.getElementById("pricevalue27").innerHTML = "$" + localStorage.getItem("pricevalue27");
+            } else {
+                document.getElementById("pricevalue27").innerHTML = "";
+            }
+
+            document.getElementById("total").textContent = "$" + total.toFixed(2);
+        }
+
+        function placeOrder() {
+
+            alert('Your order has been placed!');
+            localStorage.clear();
+
+            let fullname = getElementById("fullname").value;
+            let email = getElementById("email").value;
+            let city = getElementById("city").value;
+            let state = getElementById("state").value;
+
+            for (let i = 0; i <= 9; i++) {
+                document.getElementById("result" + i).innerHTML = "";
+                document.getElementById("pricevalue" + i).innerHTML = "";
+            }
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

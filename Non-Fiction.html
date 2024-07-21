@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues4()
+            {
+                var firstname="West With Giraffes";
+                var price = 10;
+                localStorage.setItem("textvalue4",firstname);
+                localStorage.setItem("pricevalue4", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues5()
+            {
+                var firstname="The Unthinkable";
+                var price = 10;
+                localStorage.setItem("textvalue5",firstname);
+                localStorage.setItem("pricevalue5", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues6()
+            {
+                var firstname="Long Live The Cartel";
+                var price = 10;
+                localStorage.setItem("textvalue6",firstname);
+                localStorage.setItem("pricevalue6", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues7()
+            {
+                var firstname="The Promise of Change";
+                var price = 10;
+                localStorage.setItem("textvalue7",firstname);
+                localStorage.setItem("pricevalue7", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function WestWithGiraffesDescription() {
+                alert("Woodrow Wilson Nickel, age 105, feels his life ebbing away. But when he learns giraffes are going extinct, he finds himself recalling the unforgettable experience he cannot take to his grave. It’s 1938. The Great Depression lingers. Hitler is threatening Europe, and world-weary Americans long for wonder. They find it in two giraffes who miraculously survive a hurricane while crossing the Atlantic. What follows is a twelve-day road trip in a custom truck to deliver Southern California’s first giraffes to the San Diego Zoo. Behind the wheel is the young Dust Bowl rowdy Woodrow. Inspired by true events, the tale weaves real-life figures with fictional ones, including the world’s first female zoo director, a crusty old man with a past, a young female photographer with a secret, and assorted reprobates as spotty as the giraffes. Part adventure, part historical saga, and part coming-of-age love story, West with Giraffes explores what it means to be changed by the grace of animals, the kindness of strangers, the passing of time, and a story told before it’s too late.");
+            }
+            function TheUnthinkableDescription() {
+                alert("Discover how human beings react to danger–and what makes the difference between life and death. Today, nine out of ten Americans live in places at significant risk of earthquakes, hurricanes, tornadoes, terrorism, or other disasters. Tomorrow, some of us will have to make split-second choices to save ourselves and our families. How will we react? What will it feel like? Will we be heroes or victims? In her quest to answer these questions, award-winning journalist Amanda Ripley traces human responses to some of recent history’s epic disasters, from the explosion of the Mont Blanc munitions ship in 1917–one of the biggest explosions before the invention of the atomic bomb–to the journeys of the 15,000 people who found their way out of the World Trade Center on September 11, 2001. To understand the science behind the stories, Ripley turns to leading brain scientists, trauma psychologists, and other disaster experts. She even has her own brain examined by military researchers and experiences, through realistic simulations, what it might be like to survive a plane crash into the ocean or to escape a raging fire. Ripley comes back with precious wisdom about the surprising humanity of crowds, the elegance of the brain’s fear circuits, and the stunning inadequacy of many of our evolutionary responses. Most unexpectedly, she discovers the brain’s ability to do much, much better–with just a little help.")
+            }
+            function LongLiveTheCartelDescription() {
+                alert("This is the 8th installment (Cartel 8) of the Cartel Series. In the world of the Cartel, there are many pitfalls and family curses. In the city of Miami, the good die young and the bad live forever. The first family of Miami, The Diamonds, are back and more ruthless than ever. When the family has to deal with the sins of the father, karma comes back and rests on the shoulders of Carter “CJ” Jones II . The life his father never wanted for him, calls him and the allure of family tradition sucks him in so deep, that he falls victim to the game. This story shows the second coming of a king and solidifies the cartel family tree in the roots of the streets forever.Ride with a new regime as Carter II and his cousin Mo attempt to carry the legacy of their fathers on their shoulders. Will the city respect them? Or have the ghosts of the past been erased by a new wave of hustlers. Miami was forever changed when Carter and Miamor came to town. Can The Cartel ever regain their strength or was their fall from power too devastating to repair?Ashley and JaQuavis dive into their franchise series once more and give their fans a taste of classic urban storytelling.")
+            }
+            function ThePromiseOfChangeDescription() {
+                alert("In 1956, one year before federal troops escorted the Little Rock 9 into Central High School, fourteen year old Jo Ann Allen was one of twelve African-American students who broke the color barrier and integrated Clinton High School in Tennessee. At first things went smoothly for the Clinton 12, but then outside agitators interfered, pitting the townspeople against one another. Uneasiness turned into anger, and even the Clinton Twelve themselves wondered if the easier thing to do would be to go back to their old school. Jo Ann--clear-eyed, practical, tolerant, and popular among both black and white students---found herself called on as the spokesperson of the group. But what about just being a regular teen? This is the heartbreaking and relatable story of her four months thrust into the national spotlight and as a trailblazer in history. Based on original research and interviews and featuring backmatter with archival materials and notes from the authors on the co-writing process.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="WestWithGiraffes.jpg" alt="WestWithGiraffes" width="200" height="300" style = "position: center"><br>
+                <p>West With Giraffes</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="WestWithGiraffesDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues4();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="TheUnthinkable.jpg" alt="The TheUnthinkable" width="200" height="300" style = "position: center">
+                <p>The Unthinkable</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="TheUnthinkableDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues5();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="LongLiveTheCartel.jpg" alt="Long Live The Cartel" width="200" height="300" style = "position: center">
+                <p>Long Live The Cartel</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="LongLiveTheCartelDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues6();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="The PromiseOfChange.jpg" alt="The Promise of Change" width="200" height="300" style = "position: center">
+                <p>The Promise of Change</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThePromiseOfChangeDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues7();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

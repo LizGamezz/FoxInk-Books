@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues16()
+            {
+                var firstname="The Snowdonia Killings";
+                var price = 10;
+                localStorage.setItem("textvalue16",firstname);
+                localStorage.setItem("pricevalue16", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues17()
+            {
+                var firstname="Path of Bones";
+                var price = 10;
+                localStorage.setItem("textvalue17",firstname);
+                localStorage.setItem("pricevalue17", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues18()
+            {
+                var firstname="Then She Was Gone";
+                var price = 10;
+                localStorage.setItem("textvalue18",firstname);
+                localStorage.setItem("pricevalue18", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues19()
+            {
+                var firstname="Those Empty Eyes";
+                var price = 10;
+                localStorage.setItem("textvalue19",firstname);
+                localStorage.setItem("pricevalue19", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function SnowdoniaKillingsDescription() {
+                alert("Detective Inspector Ruth Hunter lives with the pain of her partner’s mysterious and unsolved disappearance. About to hit fifty, the veteran police officer trades in the crime-ridden streets of London for a more peaceful life in rural North Wales. But Ruth has barely settled into her new position in North Wales Police, when the body of a brutally murdered woman is discovered…with strange symbols carved into her skin. Teaming up with an obstinate deputy, Ruth struggles to eliminate anyone from a long line of suspects. When another slain victim is discovered with the same cryptic markings, she’s forced to re-think the investigation. Has Ruth got what it takes to solve the case before the murderer attacks again? The Snowdonia Killings is the first book in the DI Ruth Hunter Crime Thriller series which has sold over 2 million copies. If you like dark police procedurals, psychologically complex characters, and shocking twists, then you’ll love Simon McCleave’s pulse-pounding debut novel.");
+            }
+            function PathofBonesDescription() {
+                alert("Cassie Quinn was their voice. As a medium working with the FBI and police nationwide, she communicated with murder victims, giving them a shot at justice from beyond the grave. But after an abduction that stole her powers, Cassie escaped to the quiet life of an art museum curator. That peace shatters when the ghost of a murdered woman invades her home, reigniting her lost gift. Now, Cassie is back in the game, racing against time to decipher the dead woman's message and stop a heartless killer. She's teetering on the edge of life and death, one step away from crossing into the eternal silence. This is the thrilling debut novel in the Cassie Quinn Series from Wall Street Journal bestselling author L.T. Ryan & K.M. Rought—a pulse-pounding mystery with a tantalizing touch of the paranormal.")
+            }
+            function ThenSheWasGoneDescription() {
+                alert("Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. Beloved by her parents, friends, and teachers, and half of a teenaged golden couple. Ellie was days away from an idyllic post-exams summer vacation, with her whole life ahead of her. And then she was gone. Now, her mother Laurel Mack is trying to put her life back together. It’s been ten years since her daughter disappeared, seven years since her marriage ended, and only months since the last clue in Ellie’s case was unearthed. So when she meets an unexpectedly charming man in a café, no one is more surprised than Laurel at how quickly their flirtation develops into something deeper. Before she knows it, she’s meeting Floyd’s daughters—and his youngest, Poppy, takes Laurel’s breath away. Because looking at Poppy is like looking at Ellie. And now, the unanswered questions she’s tried so hard to put to rest begin to haunt Laurel anew. Where did Ellie go? Did she really run away from home, as the police have long suspected, or was there a more sinister reason for her disappearance? Who is Floyd, really? And why does his daughter remind Laurel so viscerally of her own missing girl?")
+            }
+            function ThoseEmptyEyesDescription() {
+                alert("Alex Armstrong has changed everything about herself—her name, her appearance, her backstory. She’s no longer the terrified teenager a rapt audience saw on television, emerging in handcuffs from the quiet suburban home the night her family was massacred. That girl, Alexandra Quinlan, nicknamed Empty Eyes by the media, was accused of the killings, fought to clear her name, and later took the stand during her highly publicized defamation lawsuit that captured the attention of the nation. It’s been ten years since, and Alex hasn’t stopped searching for answers about the night her family was killed, even as she continues to hide her real identity from true crime fanatics and grasping reporters still desperate to locate her. As a legal investigator, she works tirelessly to secure justice for others, too. People like Matthew Claymore, who’s under suspicion in the disappearance of his girlfriend, a student journalist named Laura McAllister.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="SnowdoniaKillings.jpg" alt="The Snowdonia Killings" width="200" height="300" style = "position: center"><br>
+                <p>The Snowdonia Killings</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="SnowdoniaKillingsDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues16();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="PathofBones.jpg" alt="Path of Bones" width="200" height="300" style = "position: center">
+                <p>Path of Bones</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="PathofBonesDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues17();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="ThenSheWasGone.jpg" alt="Then She Was Gone" width="200" height="300" style = "position: center">
+                <p>Then She Was Gone</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThenSheWasGoneDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues18();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="ThoseEmptyEyes.jpg" alt="Those Empty Eyes" width="200" height="300" style = "position: center">
+                <p>Those Empty Eyes</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ThoseEmptyEyesDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues19();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

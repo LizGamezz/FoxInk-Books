@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues()
+            {
+                var firstname="Keeper Of Stars";
+                var price = 10;
+                localStorage.setItem("textvalue",firstname);
+                localStorage.setItem("pricevalue", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues1()
+            {
+                var firstname="Beneath A Scarlet Sky";
+                var price = 10;
+                localStorage.setItem("textvalue1",firstname);
+                localStorage.setItem("pricevalue1", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues2()
+            {
+                var firstname="The Midnight Library";
+                var price = 10;
+                localStorage.setItem("textvalue2",firstname);
+                localStorage.setItem("pricevalue2", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues3()
+            {
+                var firstname="Goodnight From Paris";
+                var price = 10;
+                localStorage.setItem("textvalue3",firstname);
+                localStorage.setItem("pricevalue3", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function KeeperOfStarsDescription() {
+                alert("1962—Twelve years removed from the summer when she first gave her heart away, Dr. Elizabeth (Ellie) Spencer, Professor of Astronomy at Indiana University, receives a mysterious package that has her asking that very question. Inside the unmarked box is a novel written by Ellie’s first love, Jack Bennett. It tells the story of a young man and woman who meet at the water’s edge and fall madly in love, only to have their romance cut short by forces beyond their control. Ellie quickly realizes this is no ordinary story; it’s their story. Captivated by Jack’s words, she immerses herself in the pages, reliving the adventures they shared that magical summer. To her astonishment, hidden among the tales of star-gazing and stolen kisses is a detail that has her questioning everything. Seeking answers, Ellie turns to her sister for help, but before they can get to the bottom of the mystery, news reaches them of their aunt’s death, sending Ellie back to the water’s edge with the hopes of finding the truth and rewriting the stars.");
+            }
+            function BeneathAScarletSkyDescription() {
+                alert("Pino Lella wants nothing to do with the war or the Nazis. He’s a normal Italian teenager―obsessed with music, food, and girls―but his days of innocence are numbered. When his family home in Milan is destroyed by Allied bombs, Pino joins an underground railroad helping Jews escape over the Alps, and falls for Anna, a beautiful widow six years his senior. In an attempt to protect him, Pino’s parents force him to enlist as a German soldier―a move they think will keep him out of combat. But after Pino is injured, he is recruited at the tender age of eighteen to become the personal driver for Adolf Hitler’s left hand in Italy, General Hans Leyers, one of the Third Reich’s most mysterious and powerful commanders. Now, with the opportunity to spy for the Allies inside the German High Command, Pino endures the horrors of the war and the Nazi occupation by fighting in secret, his courage bolstered by his love for Anna and for the life he dreams they will one day share.")
+            }
+            function MidnightLibraryDescription() {
+                alert("Somewhere out beyond the edge of the universe there is a library that contains an infinite number of books, each one the story of another reality. One tells the story of your life as it is, along with another book for the other life you could have lived if you had made a different choice at any point in your life. While we all wonder how our lives might have been, what if you had the chance to go to the library and see for yourself? Would any of these other lives truly be better? In The Midnight Library, Matt Haig's enchanting blockbuster novel, Nora Seed finds herself faced with this decision. Faced with the possibility of changing her life for a new one, following a different career, undoing old breakups, realizing her dreams of becoming a glaciologist; she must search within herself as she travels through the Midnight Library to decide what is truly fulfilling in life, and what makes it worth living in the first place.")
+            }
+            function GoodnightFromParisDescription() {
+                alert("Paris, 1939. Hollywood actress Drue Leyton, married to Frenchman Jacques Tartière, lives as an expatriate in love. But when her husband is dispatched to Brittany to work as a liaison for the British military, Drue finds herself alone with her housekeeper, adrift and heartsick in her adopted city. With her career and fame forty-five hundred miles away, Drue accepts an opportunity that will change her life forever. Befriended by seasoned wartime journalist Dorothy Thompson and urged on by political operative Jean Fraysse, Drue broadcasts radio programs to the United States. Her duty: shake America from its apathy and, as Nazis encroach and France is occupied, push for resistance and help from the US. As Drue and Jean fall under suspicion, Hitler sends his own message: when Drue’s adopted country is conquered, she will be executed. In a Paris that is no longer safe, Drue’s political passion is ignited. She’s prepared to risk anything to fight the enemy no matter how dangerous it gets―for her, for everyone she loves, and for everything she’s fighting for.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="KeeperOfStars.jpg" alt="KeeperOfStars" width="200" height="300" style = "position: center"><br>
+                <p>The Keeper of Stars</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="KeeperOfStarsDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="BeneathAScarletSky.jpg" alt="Beneath A Scarlet Sky" width="200" height="300" style = "position: center">
+                <p>Beneath A Scarlet Sky</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="BeneathAScarletSkyDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues1();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="MidnightLibrary.jpg" alt="The Midnight Library" width="200" height="300" style = "position: center">
+                <p>The Midnight Library</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="MidnightLibraryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues2();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="GoodnightFromParis.jpg" alt="Goodnight From Paris" width="200" height="300" style = "position: center">
+                <p>Goodnight From Paris</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="GoodnightFromParisDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues3();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

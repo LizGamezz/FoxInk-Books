@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font: Georgia;
+                background-color: rgb(189, 103, 22);
+            }
+            .tabs {
+                font: Georgia;
+                font-size: 25px;
+                background-color: white;
+                border: lightgrey;
+            }
+            .tab1 { grid-area: Home; }
+            .tab2 { grid-area: Store; }
+            .tab3 { grid-area: Cart; }
+            .tab4 { grid-area: FAQ/Contact; }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'Home Store Cart FAQ/Contact';
+                margin: 0px 222px 5px 223px;
+                word-spacing: 200px;
+            }
+            .genres {
+                font: Georgia;
+                font-size: 15px;
+                background-color: rgba(255, 255, 255, 0.849);
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+            .genre1 { grid-area: All; }
+            .genre2 { grid-area: Fiction; }
+            .genre3 { grid-area: Non-Fiction; }
+            .genre4 { grid-area: Biography; }
+            .genre5 { grid-area: History; }
+            .genre6 { grid-area: Murder Mystery; }
+            .genre7 { grid-area: Thriller; }
+            .genre8 { grid-area: Horror; }
+            .genre-container {
+                display:inline-table;
+                grid-template-areas:
+                'All Fiction Non-Fiction Biography History Murder Thriller Horror';
+                word-spacing: 50px;
+            }
+            .box {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box3 {
+                font: Georgia;
+                padding: 50px;
+                word-spacing: normal;
+            }
+            .box:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+                
+            }
+            .box1:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box2:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .box3:hover {
+                font: Georgia;
+                padding: 50px;
+                background-color: rgba(245, 245, 245, 0.705);
+                border-radius: 10px;
+            }
+            .clickable-text {
+                cursor: pointer;
+            }
+
+            .clickable-text:hover {
+                font: Georgia;
+                background-color: rgba(202, 106, 26, 0.705);
+                border-radius: 5px;
+            }
+        </style>
+        <script>
+            function passvalues12()
+            {
+                var firstname="History of the World";
+                var price = 10;
+                localStorage.setItem("textvalue12",firstname);
+                localStorage.setItem("pricevalue12", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues13()
+            {
+                var firstname="The Hundred Years' War";
+                var price = 10;
+                localStorage.setItem("textvalue13",firstname);
+                localStorage.setItem("pricevalue13", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues14()
+            {
+                var firstname="Brief History of Intelligence";
+                var price = 10;
+                localStorage.setItem("textvalue14",firstname);
+                localStorage.setItem("pricevalue14", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+
+            function passvalues15()
+            {
+                var firstname="The Color of Law";
+                var price = 10;
+                localStorage.setItem("textvalue15",firstname);
+                localStorage.setItem("pricevalue15", price);
+                alert ("Added to Cart!");
+                return false;
+            }
+            function HistoryoftheWorldDescription() {
+                alert("Maps don't just show us where to go, but also where we've been. If you're interested in finding out more about the biggest events in world history, then this book all about history of the world is perfect for you! This stunning history book for adults starts with the evolution and migration of our oldest ancestors out of Africa. You can then look up maps about the Greece and Persian War, the Mongol Conquests, Medieval Europe's trade routes, and the rise of the Ottomans. Explore maps about the colonisation of North America, the scientific revolution, Napoleon's advances, and Britain's control of India. Then uncover the history of later centuries, such as the Age of Imperialism, the American Civil War, industrialised Europe and the transformation of Japan.");
+            }
+            function HundredYearsDescription() {
+                alert("In 1899, Yusuf Diya al-Khalidi, mayor of Jerusalem, alarmed by the Zionist call to create a Jewish national home in Palestine, wrote a letter aimed at Theodore Herzl: the country had an indigenous people who would not easily accept their own displacement. He warned of the perils ahead, ending his note, “in the name of God, let Palestine be left alone.” Thus Rashid Khalidi, al-Khalidi’s great-great-nephew, begins this sweeping history, the first general account of the conflict told from an explicitly Palestinian perspective.")
+            }
+            function ABriefHistoryDescription() {
+                alert("In the last decade, capabilities of artificial intelligence that had long been the realm of science fiction have, for the first time, become our reality. AI is now able to produce original art, identify tumors in pictures, and even steer our cars. And yet, large gaps remain in what modern AI systems can achieve—indeed, human brains still easily perform intellectual feats that we can’t replicate in AI systems. How is it possible that AI can beat a grandmaster at chess but can’t effectively load a dishwasher? As AI entrepreneur Max Bennett compellingly argues, finding the answer requires diving into the billion-year history of how the human brain evolved; a history filled with countless half-starts, calamities, and clever innovations. Not only do our brains have a story to tell—the future of AI may depend on it.")
+            }
+            function ColorofLawDescription() {
+                alert("Widely heralded as a “masterful” (Washington Post) and “essential” (Slate) history of the modern American metropolis, Richard Rothstein’s The Color of Law offers “the most forceful argument ever published on how federal, state, and local governments gave rise to and reinforced neighborhood segregation” (William Julius Wilson). Exploding the myth of de facto segregation arising from private prejudice or the unintended consequences of economic forces, Rothstein describes how the American government systematically imposed residential segregation: with undisguised racial zoning; public housing that purposefully segregated previously mixed communities; subsidies for builders to create whites-only suburbs; tax exemptions for institutions that enforced segregation; and support for violent resistance to African Americans in white neighborhoods. A groundbreaking, “virtually indispensable” study that has already transformed our understanding of twentieth-century urban history (Chicago Daily Observer), The Color of Law forces us to face the obligation to remedy our unconstitutional past. 13 illustrations.")
+            }
+        </script>
+    </head>
+    <body><center>
+        <img src="FoxInk.png" alt="Logo" style = "position: center">
+        <div class="grid-container">
+        <div class="tabs">
+            <a class="tab1" href="Home.html">Home</a>
+            <a class="tab2" href="Books.html">Store</a>
+            <a class="tab4" href="Cart.html">Cart</a>
+            <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+        </div>
+    </div>
+    <div class="genre-container">
+        <div class="genres">
+            <a class="genre1" href="Books.html">All</a>
+            <a class="genre2" href="Fiction.html">Fiction</a>
+            <a class="genre3" href="Non-Fiction.html">Non-Fiction</a>
+            <a class="genre4" href="Biography.html">Biography</a>
+            <a class="genre5" href="History.html">History</a>
+            <a class="genre6" href="Murder.html">Murder</a>
+            <a class="genre7" href="Thriller.html">Thriller</a>
+            <a class="genre8" href="Horror.html">Horror</a>
+        </div>
+    <table>
+        <tr>
+            <th>
+                <div class="box">
+                <img src="HistoryoftheWorld.jpg" alt="History of the World" width="200" height="300" style = "position: center"><br>
+                <p>History of the World</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="HistoryoftheWorldDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues12();">Add to cart</button>
+                </form></p></div></th>
+         
+            <th>
+                <div class="box1">
+                <img src="HundredYears.jpg" alt="The Hundred Years' War" width="200" height="300" style = "position: center">
+                <p>The Hundred Years' War</p> 
+                <p class="clickable-text" style="cursor: pointer;" onclick="HundredYearsDescription()">Click for Description</p>
+                <p class="price">$10.00</p> 
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues13();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box2">
+                <img src="ABriefHistory.jpg" alt="A Brief History of Intelligence" width="200" height="300" style = "position: center">
+                <p>Brief History of Intelligence</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ABriefHistoryDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues14();">Add to cart</button>
+                </form></p></div></th>
+        
+            <th>
+                <div class="box3">
+                <img src="TheColorofLaw.jpg" alt="The Color of Law" width="200" height="300" style = "position: center">
+                <p>The Color of Law</p>
+                <p class="clickable-text" style="cursor: pointer;" onclick="ColorofLawDescription()">Click for Description</p>
+                <p class="price">$10.00</p>
+                <p><form action="Cart.html">
+                    <button type="button" style="position:relative" id="addToCart" onclick="passvalues15();">Add to cart</button>
+                </form></p></div></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    </body>
+    </html>

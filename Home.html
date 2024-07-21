@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> Welcome to FoxInk Books! </title>
+</head>	
+ 	<style>
+	    body{
+	        font: Georgia;
+		    background-color: rgb(189, 103, 22);
+		    font-size: 25px;
+            margin-top: 15px; 
+            margin-left: 35px;
+		    margin-right: 35px;
+		    margin-bottom: 55px;
+        }
+        .tabs {
+            font: Georgia;
+            font-size: 25px;
+            background-color: white;
+            border: lightgrey;
+        }
+        .tab1 { grid-area: Home; }
+        .tab2 { grid-area: Store; }
+        .tab3 { grid-area: FAQ/Inquiry; }
+        .tab4 { grid-area: Cart; }
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'Home   Store   FAQ/Inquiry   Cart';
+            margin: 0px 195px 5px 196px;
+            word-spacing: 200px;
+        }
+        ul { 
+	        background-color: rgb(216, 98, 30);
+ 	        padding: 20px;
+        }
+        ul li{ 
+		    background-color: rgb(255, 255, 255);
+            margin: 5px;
+        }
+        .store:hover {
+            font: Georgia;
+            padding: 20px;
+            background-color: rgba(245, 245, 245, 0.705);
+            border-radius: 10px;
+            width: fit-content;
+        }
+        .box {
+                font: Georgia;
+                padding: 50px;
+                padding-left: 250px;
+                padding-bottom: 10px;
+            }
+            .box1 {
+                font: Georgia;
+                padding: 50px;
+                padding-bottom: 10px;
+            }
+            .box2 {
+                font: Georgia;
+                padding: 50px;
+                padding-bottom: 10px;
+        }
+
+</style>
+
+<body><center>
+  <img src="FoxInk.png" alt="Logo" style = "position: center">
+  <div class="grid-container">
+  <div class="tabs">
+    <a class="tab1" href="Home.html">Home</a>
+    <a class="tab2" href="Books.html">Store</a>
+    <a class="tab4" href="Cart.html">Cart</a>
+    <a class="tab3" href="FAQ.html">FAQ/Contact</a>
+  </div></center> 
+<table>
+    <tr>
+        <th>
+            <div class="box">
+            <img src="BadKarma.jpg" alt="Bad Karma" height="400" style="position: center"></div>
+        </th>
+        <th>
+            <div class="box1">
+            <img src="DontBelieveIt.jpg" alt="Don't Believe It" height="400" style="position: center"></div>
+        </th>
+        <th>
+            <div class="box2">
+            <img src="NoTime.jpg" alt="No Time Like The Future" height="400" style="position: center"></div>
+        </th>
+    </tr>
+</table>
+    <br>
+<center><h2> About </h2>
+ <p> Welcome to <strong>FoxInk Books</strong>! If you are stumped on what book to read next, you have come to the right place. </p>
+	<br>
+<p>Here at FoxInk Books, we have you covered with whatever your heart desires from the realm of fantasy to murder mystery. 
+   On the store page, you can choose the type of book you want to read from the menu. 
+   From there, you can explore the many books that we have offered currently and each at the low price of $10!
+   <br>
+   </p>
+<div class="store">
+    <a class="storebutton" href="Books.html">Check Out Our Store Here!</a>
+</div>
+</center></body>
+</html>
